@@ -22,19 +22,77 @@
 
 ### 의문 대명사 질문
 
-1. when으로 시작하는 질문
-   - 만능 답변: yesterday, ~week(s)/month(s)/year(s) ago, in the morning/afternoon, at night
-   - 질문 예시: When was the last time you went to a grocery store?
-   - 모범 답안: The last time I went to a grocery store was yesterday.
-   - 질문 예시: When was the last time you rode on a train?
-   - 모범 답안: The last time I rode on a train was three months ago.
-   - 질문 예시: When was the last time you visited a bank?
-   - 모범 답안: The last time I visited a bank was three months ago.
-   - 질문 예시: When was the last time you bought clothing for a specific purpose?
-   - 모범 답안: The last time I bought clothing for a specific purpose was two years ago.
-2. When 질문 출제 시, 조심해야 하는 질문 유형
+#### 1. when으로 시작하는 질문
+
+- 만능 답변: yesterday, ~week(s)/month(s)/year(s) ago, in the morning/afternoon, at night
+- 질문 예시: When was the last time you went to a grocery store?
+- 모범 답안: The last time I went to a grocery store was yesterday.
+- 질문 예시: When was the last time you rode on a train?
+- 모범 답안: The last time I rode on a train was three months ago.
+- 질문 예시: When was the last time you visited a bank?
+- 모범 답안: The last time I visited a bank was three months ago.
+- 질문 예시: When was the last time you bought clothing for a specific purpose?
+- 모범 답안: The last time I bought clothing for a specific purpose was two years ago.
+
+1. When 질문 출제 시, 조심해야 하는 질문 유형
    1. **When you** want to be alone, where do you usually go? -> ~할 때, ~시에
       - When I want to be alone, I usually go to my car.
    2. **When is the best time of day to** go to a fitness center? -> 하루 중 언제?
       - The best time of day to go to a fitness center is in the morning.
-3. When was/do/does/can/would/is ~? -> 언제~?
+2. When was/do/does/can/would/is ~? -> 언제~?
+
+#### 2. where로 시작하는 질문
+
+- 만능 답변
+  - 인터넷으로/인터넷 상에서: throught the Internet/on the Internet
+  - 백화점/식료품점: the department store/the grocery store
+  - 내 방/공원: my room/park 
+- 질문 예시: Where do you usually go when you want to be alone?
+- 모범 답안: When I want to be alone, I usually go to my room.
+- 질문 예시: Where do you usually get information about new music?
+- 모범 답안: I usually get information about new music throught the Internet.
+- 질문 예시: Where do you think is the best place to open a grocery store in your area?
+- 모범 답안: (I think) the best place to open a grocery store in my area is near the subway station.
+
+#### 3. what으로 시작하는 질문
+
+- 만능 답변
+  - 질문과 관련 있는 특정한 something(무언가) -> 명사
+- 질문 예시: What is the most popular social networking site among your friends?
+- 모범 답안: The most popular social networking site among my friends is Facebook.
+- 질문 예시: What types of activites do you prefer to do when you go on vacation?
+- 모범 답안: When I go on vacation, I prefer to go to festivals.
+
+#### 3. how + 형용사로 시작하는 질문
+
+##### how often
+
+- 만능 답변: every day(매일), once (or twice) a week/a month/a year(1주에 한 번 혹은 두 번), on weekends(주말마다)
+- 질문 예시: How often do you use your cell-phone?
+- 모범 답안: I use my cell-phone many times a day.
+- 질문 예시: How often do you travel on vaction?
+- 모범 답안: I travel on vacation once or twice a year.
+- 질문 예시: How often do you go to a convenient store?
+- 모범 답안: I go to a convenient store once or twice a week.
+
+##### how long - 시간/기간
+
+- 만능 답변: for thirty minutes(30분 동안), for six months(6개월 동안)
+- 질문 예시: How long did you have to travel to go to your school?
+- 모범 답안: I had to travel **for** about thirty minutes to go to my school.
+
+##### how far- / how close- 시간/거리
+
+- 만능 답변: 5 minutes away (from 장소) - (장소로부터) 5분 거리에, 2 hours away (from 장소) - (장소로부터) 2시간 거리에, 2 blocks away (from 장소) - (장소로부터) 두 블록 거리에
+- 질문 예시: How far away from your hometown do you live now?
+- 모범 답안: I live now about an hour away from my hometown.
+- 질문 예시: How close from your home is the nearest movie theater?
+- 모범 답안: The nearest movie theater is about 5 minutes away from my home.
+
+#### 4. 일반 의문문
+
+##### Do you think/like~?, Would you~?
+
+- 만능 답변: Yes or No, I think ~
+- 질문 예시: Do you think the Internet is a good way to get information about movies?
+- 모범 답안: Yes, I think the Internet is a good way to get information about movies.
