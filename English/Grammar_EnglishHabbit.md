@@ -31,3 +31,28 @@
 1. I am a web developer.
 2. You are manager.
 3. They are designers.
+
+
+
+# Day 2. be 동사와 전치사
+
+## 예문
+
+1. I **am here**.
+2. I **am in** my office.
+3. My office **is behind** Gyeongbok Palace.
+
+## 문법
+
+1. be동사+장소: ~이 ~에 있다
+   - be동사 다음에 위치/장소를 나타내는 표현을 붙여 주어의 위치 설명
+2. be동사+전치사+장소: 주어의 위치 설명
+   - It is on ~: 그것은 ~ 위에 있어요
+   - They are under ~: 그것들은 ~ 아래에 있어요
+3. 장소를 설명하는 전치사: in(안에), over(넘어서), at(장소에), between(사이에), behind(뒤에), from(~로부터), in front of(~앞에)
+
+## 연습
+
+1. My cup is here.
+2. She is between you and me.
+3. Laptop is on the table.
