@@ -56,3 +56,27 @@
 1. My cup is here.
 2. She is between you and me.
 3. Laptop is on the table.
+
+
+
+# Day 3. be동사와 상태/기분 형용사
+
+## 예문
+
+1. I**'m excited**.
+2. I**'m interested**.
+3. My co-workers **are kind.**
+
+## 문법
+
+1. be동사+감정 형용사: 기분 표현
+   - excited, happy, sad, angry
+2. be동사+상태 형용사: 주어 상태 표현
+   - tired, hungry, cold, frozen, tall, slim, nice, kind
+3. 주어와 형용사 수일치 필요 없음
+
+## 연습
+
+1. I'm happy.
+2. I'm hugry now.
+3. You are funny.
