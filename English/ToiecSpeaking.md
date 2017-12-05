@@ -96,3 +96,21 @@
 - 만능 답변: Yes or No, I think ~
 - 질문 예시: Do you think the Internet is a good way to get information about movies?
 - 모범 답안: Yes, I think the Internet is a good way to get information about movies.
+
+#### 하나의 항목 안에 두 개의 질문이 출제 된다면
+
+- How often do you go to a convenient store and when was the last time you went there?
+- I go to a convenient store once or twice a week and the last time I went there was yesterday.
+- When was the last time you went to a convenient store and what **did** you buy?
+- I last time I went to a convenient store was yesterday and I **bought** some snacks.
+
+#### 과거 시제 엄청 중요!
+
+- did + go = went
+- did + eat = ate
+- did + study = studied
+
+#### 추가 문장
+
+- Would you prefer to buy tickets for concert in person **or** online? Why?
+- I would prefer to buy tickets for concert online **because** It is more convenient.
