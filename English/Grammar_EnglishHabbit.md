@@ -80,3 +80,26 @@
 1. I'm happy.
 2. I'm hugry now.
 3. You are funny.
+
+
+
+# Day 4. It's+시간/거리/날씨/요일/날자
+
+## 예문
+
+1. **It's** 2:30.
+2. **It's** sunny today.
+3. **It's** Tuesday. **It's** April 29th.
+
+## 문법
+
+1. It's+시간/거리: (시간/거리)가 ~이다
+2. It's+날씨 형용사: (날씨)가 ~이다
+   - sunny, cloudy, rainy, windy, cold, hot
+3. It's+날짜/월/요일: 날짜나 월, 요일 말할 때
+
+## 연습
+
+1. It's dinner time now.
+2. It's windy today.
+3. It's Tuesday, December 5th today.
