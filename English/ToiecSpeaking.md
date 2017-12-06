@@ -114,3 +114,46 @@
 
 - Would you prefer to buy tickets for concert in person **or** online? Why?
 - I would prefer to buy tickets for concert online **because** It is more convenient.
+
+## Q6 (30초) 답변 문제 유형
+
+- 일관성있고 논리적인 대답이 필요
+- 시간에서 나오는 감점이 있으므로 시간을 다 채워줘야 함
+
+### 답변 구조
+
+**질문:** 자가용을 이용하는 것이 좋아? 지하철을 이용하는 것이 좋아?
+
+**답변:**
+
+나는 지하철 사용하는 것이 좋아. **이렇게 생각하는 데에는 몇 가지 이유가 있어**.
+
+**첫째**, 돈이 덜 들어.
+
+**둘째**, 운전 안 해도 되니까 더 편해.
+
+**이런 이유들로**, 나는 지하철을 이용하는 것이 좋아.
+
+**영어:**
+
+Which do you prefer; driving your own car **or** taking public transportation?
+
+통째로 외울 문장은 **볼드**
+
+I prefer *taking public transportation*. **I have a few reasons for this.** 
+
+**First of all**, *taking public transportation* is cheaper. = It is cheaper.
+
+**Also**, it is more convenient (because I don't have to drive).
+
+**So, these are the main reasons why** I prefer *taking public transportation*.
+
+### Ideas
+
+- 태어난 동네에서 계속 사는 것을 선호합니까, 아니면 여러 도시에 살아보는 것을 선호합니까?
+- 여가 시간을 가족과 보내는 것을 선호합니까, 아니면 친구들이랑 보내는 것을 선호합니까?
+- 새로운 동네로 이사를 가게 된다면, 어떠한 요소를 가장 중요하게 생각하겠습니까? 
+  - 조용한 동네/가까운 공원들/편리한 교통수단
+- 휴가를 계획할 시, 여행사를 통해 갈 의사가 있습니까?
+- 요리를 잘하고 싶다면 어떤 방법을 사용하시겠습니까? 
+  - 지인에게 물어봄/요리책 사서 읽음/요리학원 다님
