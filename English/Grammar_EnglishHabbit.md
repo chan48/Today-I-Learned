@@ -103,3 +103,23 @@
 1. It's dinner time now.
 2. It's windy today.
 3. It's Tuesday, December 5th today.
+
+# Day 5. be동사 부정문
+
+## 예문
+
+1. I **am not** hungry.
+2. They **are not** my co-worker**s**.
+3. He**'s not** here.
+
+## 문법
+
+1. be동사+not: be동사의 부정문, (상태/기분)이 ~이 아니다
+2. Not 뒤의 명사는 주어와 수가 일치해야 함
+3. be동사+not 줄여쓰기: I'm not, You're not, He's not
+
+##  연습
+
+1. I am not gloomy.
+2. He is not teacher.
+3. It's not cheap.
