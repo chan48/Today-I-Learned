@@ -157,3 +157,21 @@ I prefer *taking public transportation*. **I have a few reasons for this.**
 - 휴가를 계획할 시, 여행사를 통해 갈 의사가 있습니까?
 - 요리를 잘하고 싶다면 어떤 방법을 사용하시겠습니까? 
   - 지인에게 물어봄/요리책 사서 읽음/요리학원 다님
+
+### 유용한 표현들
+
+- [—] makes me feel happy.
+  - Eating out makes me feel happy.
+  - Shopping makes me feel happy.
+  - You make me feel happy.
+- [—] makes me feel depressed.
+  - Cold weather makes me feel depressed.
+  - Watching sad movies makes me feel depressed.
+- [—] is 형용사
+  - Using public transportation is **cheap**.
+  - Shopping online is **convenient**.
+  - Some TV programs are **educational**.
+  - 형용사: expensive, inconvenient, helpful, fun, exciting, quiet, crowded
+- I really like [—].
+  - I really like shopping.
+  - I really like listening to music.
