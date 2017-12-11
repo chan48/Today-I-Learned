@@ -144,3 +144,20 @@
 2. They were not old.
 3. I was young.
 
+# Day 7. be동사 의문문
+
+## 예문
+
+1. Are you Mr.Kang?
+2. Is he okay?
+3. Are they reliable?
+
+## 문법
+
+1. be동사 의문문: be동사+주어~?, 신분/이름/상태/기분/특징/성질 확인
+
+## 연습
+
+1. Are you student?
+2. Is he happy?
+3. Are you okay?
