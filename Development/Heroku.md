@@ -43,7 +43,29 @@ queue: java -jar lib/queue-processor.jar
 
 - 용어: 앱은 소스 코드와 어떤 종속에 대한 설명과 Procfile로 구성됩니다.
 
-Heroku는 모든 언어에서 비슷한 방식으로 종속성들과 Procfile을 활용하여 앱을 빌드하고, 실행하고, 확장할 수 있게 해주는 다각형 플랫폼입니다. Procfile은 앱의 기술적인 측면을 나타냅니다.
+Heroku는 모든 언어에서 비슷한 방식으로 종속성들과 Procfile을 활용하여 앱을 빌드하고, 실행하고, 확장할 수 있게 해주는 다각형 플랫폼입니다. Procfile은 앱의 아키텍처 측면을 보여냅니다. (위의 예제에는 두 가지 엔트리 포인트가 있음) 그리고 이 아키텍처는 당신이 각 부분들을 독립적으로 확장하게 해줍니다. Heroku에서 잘 동작하는 앱을 위한 아키텍처 원리에 대한 훌륭한 가이드는 [Architecting Applications for Heroku](https://devcenter.heroku.com/articles/architecting-apps)에서 볼 수 있습니다.
+
+### Deploying applications
+
+[Git](https://git-scm.com/)은 많은 개발자들이 소스 코드의 버전을 관리하기 위해 사용하는 강력한 버전 관리 시스템입니다. Heroku 플랫폼은 앱 배포를 위한 기본 수단으로 Git을 사용합니다. (API를 통해 Heroku로 소스 코드를 전송하는 많은 방법들이 있습니다.)
+
+Heroku에서 앱을 생성할 때, 일반적으로 `heroku`라는 새 Git 리모트를 로컬 Git 저장소와 연결합니다.
+
+결과적으로 코드를 배포하는 것은 `git push`와 비슷해지지고 `heroku` 리모트인 점이 다릅니다.
+
+```shell
+$ git push heroku master
+```
+
+- 용어: 앱을 배포하는 것은 당신의 앱을 Git, GitHub, Dropbox 혹은 API 통한 방법들을 사용하여 Heroku에 보내는 것을 의미합니다.
+
+앱을 배포하는 많은 방법들이 있습니다. 예를 들어 당신은 [GitHub integration](https://devcenter.heroku.com/articles/github-integration)을 사용하여 각각의 새로운 pull request를 당신의 새로운 앱에 연결시킬 수 있습니다. 이는 모든 종류의 것들을 지속적으로 통합하여 진행할 수 있게합니다. 다른 방법으로는 [Dropbox Sync](https://devcenter.heroku.com/articles/dropbox-sync)를 사용할 수 있습니다. 이 방법은 Dropbox의 폴더들의 컨텐츠를 Heroku에 배포할 수 있게 해줍니다. 마지막으로 앱을 빌드하고 배포하기 위해 [Heroku API](https://devcenter.heroku.com/articles/build-and-release-using-the-api)를 사용할 수도 있습니다. 
+
+배포는 당신의 앱이 로컬 시스템에서 Heroku로 움직이는 것을 말합니다. 그리고 Heroku는 앱이 배포될 수 있는 몇 가지 방법을 제공합니다.
+
+
+
+
 
 
 
@@ -59,4 +81,4 @@ Heroku는 모든 언어에서 비슷한 방식으로 종속성들과 Procfile을
 
 # [Ruby on Heroku](https://devcenter.heroku.com/categories/ruby)
 
-Heroku는 클라우드에 Ruby 앱을 쉽게 배포하고 확장할 수 있게 해줍니다. 당신이 Sinatra나 Rails와 같은 프레임워크를 선호하든, Unicorn 혹은 원시 소켓으로 손을 더럽히든 Heroku는 상관하지 않으므로, 좋아하는 툴을 이용해서 자신의 방법으로 빌드할 수 있습니다.
+Heroku는 클라우드에 Ruby 앱을 쉽게 배포하고 확장할 수볼게 해줍니다. 당신이 Si사용할atra나 Rails와 같은 프레임워크를 선호하든, Unicorn 혹은 원시 소켓으로 손을 더럽히든 Heroku는 상관하지 않으므로, 좋아하는 툴을 이용해서 자신의 방법으로 빌드할 수 있습니다.
