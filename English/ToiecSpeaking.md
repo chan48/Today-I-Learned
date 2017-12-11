@@ -175,3 +175,20 @@ I prefer *taking public transportation*. **I have a few reasons for this.**
 - I really like [—].
   - I really like shopping.
   - I really like listening to music.
+
+## Review
+
+- 문제 1
+  - Imagine that someone wants to open a new clothing store in your area. You have agreed to participate in a telephone interview about clothing stores.
+  - How often do you shop for clothing and where do you usually go?
+  - When was the last time you bought clothing for a specific purpose and what did you need it for?
+  - Would you like to receive clothes as a gift? Why or why not?
+- 문제 2
+  - Imagine a Sociology professor is doing research about homes and neighborhoods in your area. You have agreed to participate in a telephone interview about where you live.
+  - How far away from your school or workplace do you live? And how do you get there?
+    - I live about 10 minutes away from my school. And I usually get there by walk.
+  - How long have you lived in your current neighborhood?
+    - I have lived in my current neightborhood for about 5 years. I really like my neighborhood.
+  - Which one of the following would you most likely to have in your neightborgood? And why?
+  - A fancy restaurant / A nice swimming pool / A convenient grocery store
+    - I would most likely to have a nice swimming pool in my neighborhood. I have a few reasons for thie. First of all, exercising makes me feel happy. Also, I realy like swimming. So, these are the main reasons why I would most likely to have a nice swimming pool in my neighborhood.
