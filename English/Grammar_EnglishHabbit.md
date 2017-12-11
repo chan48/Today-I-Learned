@@ -123,3 +123,24 @@
 1. I am not gloomy.
 2. He is not teacher.
 3. It's not cheap.
+
+# Day 6. be동사 과거 시제
+
+## 예문
+
+1. I **was** surprised.
+2. I **was not** surprised.
+3. I **was** surprised **last night**.
+
+## 문법
+
+1. be동사 과거형: am/is -> was, are -> were
+2. was not, were not: was, were의 부정문, ~이 아니었다
+3. 과거를 나타내는 부사: yesterday, last night, last month, last Sunday
+
+## 연습
+
+1. You was smart.
+2. They were not old.
+3. I was young.
+
