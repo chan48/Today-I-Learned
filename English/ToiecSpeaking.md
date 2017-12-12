@@ -255,3 +255,46 @@ I prefer *taking public transportation*. **I have a few reasons for this.**
   - Which one of the following would you most likely to have in your neightborgood? And why?
   - A fancy restaurant / A nice swimming pool / A convenient grocery store
     - I would most likely to have a nice swimming pool in my neighborhood. I have a few reasons for thie. First of all, exercising makes me feel happy. Also, I realy like swimming. So, these are the main reasons why I would most likely to have a nice swimming pool in my neighborhood.
+
+
+
+# Part 4. 주어진 정보를 사용하여 질문에 답하기
+
+## 개요
+
+- Reading time: 30초
+- Question 7: 15초 / Question 8: 15초 / Question 9: 30초
+- 질문이 음성으로만 나옴
+
+## 최다 빈출 유형
+
+- 일정표가 나오는 문제
+- 처음 소개문 음성은 크게 중요하지 않음. 중요한건 질문
+
+## Question 7
+
+- 언제/어디서/몇시에 열리니?
+- 제목에 있는 정보를 묻는 질문
+
+What is the date of the convention and where will it be held?
+
+## Question 8
+
+- ~라고 들었는데 맞나요? 라는 유형
+- 거의 맞지 않다고 대답하면 됨
+
+I heard that the early registration price is 30 dollars. Is this right?
+
+## Question 9
+
+I really interested in attending the **workshops**. Could you give me al the details about any **workshops** you're offering?
+
+## 문장 만들기
+
+This [   ] will take place/will be held **at** City convention Center.
+
+This [   ] will take place/will be held **on** Saturday, Man 12th.
+
+- Event, Conference, Seminar, Workshop, Interview
+- **in** + The main hall, The auditorium, The conference room, Room 245
+
