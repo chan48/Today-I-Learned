@@ -71,7 +71,7 @@
 
    - The best time of day to go to a fitness center **is in the morning/afternoon/at night**.
 
-##### Homework
+#### Homework
 
 1. When was the last time you ate out?
 2. When was the last time you met your best friend?
@@ -98,67 +98,101 @@
 23. When is the best time of day to go jogging?
 24. When is the best time of day to make a business call?
 
+#### 2. Where로 시작하는 질문
+
+만능 답변: through the Internet, on the Internet, the department store, the grocery store, my room, park
+
+##### 문제 예시
+
+1. Where do you usually go when you want to be alone?
+   - When I want to be alone, I usually go **to my room**.
+2. Where do you usually get information about new music?
+   - I usually get information about new music **through the Internet**.
+3. Where do you think is the best place to open a grocery store in your area?
+   - I think the best place to open a grocery store in my area is **near the subway station**.
+
+#### 3. What으로 시작하는 질문
+
+만능 답변: 질문과 관련 있는 특정한 무언가(명사)를 순발력있게 빨리 생각해내기
+
+##### 문제 예시
+
+1. What is the most popular social networking site among your friends?
+   - The most popular social networking site among my friends is **Facebook**.
+2. What type of activities do you prefer to do when you go on vacation?
+   - When I go on vacation, I prefer to **go to festivals**.
+
+#### 4. How often으로 시작하는 질문
+
+만능 답변: every day, once or twice a week/a month/a year, on weekends, many times a day/a week/a month
+
+##### 문제 예시
+
+1. How often do you use your cell-phone?
+   - I use my cell-phone **many times a day**.
+2. How often do you travel on vacation?
+   - I travel on vacation **once or twice a year**.
+3. How often do you go to a convenient store?
+   - I go to a convenient store **once or twice a week**.
+
+
+
+### How + adjective(형용사)
+
+#### 1. How long + 시간/기간
+
+만능 답변: for thirty minutes, for six months
+
+##### 질문 예시
+
+1. How long did you have to travel to go to your school?
+   - I had to travel **for about thirty minutes** to go my school.
+
+#### 2. How far/close + 시간/거리
+
+만능 답변: 5 minutes away from 장소, 2 hours away from 장소, 2 blocks away from 장소
+
+##### 질문 예시
+
+1. How far away from your hometown do you live now?
+   - I live now **about an hour away** from my hometown.
+2. How close from your home is the nearest movie theater?
+   - The nearest movie theater is **about 5 minutes away** from my home.
+
+
+
+### 일반 의문문
+
+#### 1. Do you think/like~?, Would you~? - 네/아니오 질문
+
+만능 답변: Yes or No, I think/like~?, I would~?
+
+##### 질문 예시
+
+1. Do you think the Internet is a good way to get information about movies?
+   - **Yes, I think** the Internet is a good way to get information about movies.
+   - **No, I don't think** the Internet is a good way to get information about movies.
+
+#### Homework
+
+1. Where do you usually go when you want to be alone?
+2. Where do you usually get information about new music?
+3. Where do you think is the best place to open a grocery store in your area?
+4. What is the most popular social networking site among your friends?
+5. Whte types of activities do you prefer to do when you go on vacation?
+6. How often do you use your cell-phone?
+7. How often do you travel on vacation?
+8. How often do you go to a convenient store?
+9. How long did you have to travel to go to your school?
+10. How far away from your hometown do you live now?
+11. How close from your home is the nearest movie theater?
+12. Do you think the Internet is a good way to get information about movie?
+
 
 
 ---
 
 
-
-#### 2. where로 시작하는 질문
-
-- 만능 답변
-  - 인터넷으로/인터넷 상에서: throught the Internet/on the Internet
-  - 백화점/식료품점: the department store/the grocery store
-  - 내 방/공원: my room/park 
-- 질문 예시: Where do you usually go when you want to be alone?
-- 모범 답안: When I want to be alone, I usually go to my room.
-- 질문 예시: Where do you usually get information about new music?
-- 모범 답안: I usually get information about new music throught the Internet.
-- 질문 예시: Where do you think is the best place to open a grocery store in your area?
-- 모범 답안: (I think) the best place to open a grocery store in my area is near the subway station.
-
-#### 3. what으로 시작하는 질문
-
-- 만능 답변
-  - 질문과 관련 있는 특정한 something(무언가) -> 명사
-- 질문 예시: What is the most popular social networking site among your friends?
-- 모범 답안: The most popular social networking site among my friends is Facebook.
-- 질문 예시: What types of activites do you prefer to do when you go on vacation?
-- 모범 답안: When I go on vacation, I prefer to go to festivals.
-
-#### 3. how + 형용사로 시작하는 질문
-
-##### how often
-
-- 만능 답변: every day(매일), once (or twice) a week/a month/a year(1주에 한 번 혹은 두 번), on weekends(주말마다)
-- 질문 예시: How often do you use your cell-phone?
-- 모범 답안: I use my cell-phone many times a day.
-- 질문 예시: How often do you travel on vaction?
-- 모범 답안: I travel on vacation once or twice a year.
-- 질문 예시: How often do you go to a convenient store?
-- 모범 답안: I go to a convenient store once or twice a week.
-
-##### how long - 시간/기간
-
-- 만능 답변: for thirty minutes(30분 동안), for six months(6개월 동안)
-- 질문 예시: How long did you have to travel to go to your school?
-- 모범 답안: I had to travel **for** about thirty minutes to go to my school.
-
-##### how far- / how close- 시간/거리
-
-- 만능 답변: 5 minutes away (from 장소) - (장소로부터) 5분 거리에, 2 hours away (from 장소) - (장소로부터) 2시간 거리에, 2 blocks away (from 장소) - (장소로부터) 두 블록 거리에
-- 질문 예시: How far away from your hometown do you live now?
-- 모범 답안: I live now about an hour away from my hometown.
-- 질문 예시: How close from your home is the nearest movie theater?
-- 모범 답안: The nearest movie theater is about 5 minutes away from my home.
-
-#### 4. 일반 의문문
-
-##### Do you think/like~?, Would you~?
-
-- 만능 답변: Yes or No, I think ~
-- 질문 예시: Do you think the Internet is a good way to get information about movies?
-- 모범 답안: Yes, I think the Internet is a good way to get information about movies.
 
 #### 하나의 항목 안에 두 개의 질문이 출제 된다면
 
