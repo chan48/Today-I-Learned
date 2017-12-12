@@ -161,3 +161,23 @@
 1. Are you student?
 2. Is he happy?
 3. Are you okay?
+
+# Day 8. 일반동사
+
+## 예문
+
+1. I **have** a dog.
+2. My dog **needs** a friend.
+3. He **gets up** early in the morning.
+
+## 문법
+
+1. 일반동사: be동사를 제외한 모든 동사, 동작이나 상태를 나타냄
+2. 주어가 3인칭 단수인 경우: -s/-es
+3. 일반동사의 현재형은 습관이나 일상을 표현
+
+## 연습
+
+1. I eat breakfast.
+2. He loves me.
+3. I eat salad in the morning.
