@@ -42,9 +42,9 @@
 
 #### 1. When으로 시작하는 질문
 
-만능 답변: yesterday, ~ week(s)/month(s)/year(s) ago, in the morning/afternoon, at night
+만능 답변: yesterday, ~ week(s)/month(s)/year(s) ago, in the morning/afternoon, at nigh
 
-#### 문제 예시
+##### 문제 예시
 
 1. When was the last time you went to a grocery store?
    - The last time I went to a grocery store **was yesterday**.
@@ -55,7 +55,7 @@
 4. When was the last time you bought clothing for a specific purpose?
    - The last time I bought clothing for a specific purpose **was two years ago**.
 
-#### When 질문 출제 시, 조심해야 하는 질문 유형
+##### When 질문 출제 시, 조심해야 하는 질문 유형
 
 언제~?라는 의미로 쓰일 때: When was/do/does/can/would/is~?
 
@@ -71,17 +71,17 @@
 
    - The best time of day to go to a fitness center **is in the morning/afternoon/at night**.
 
-#### Homework
+##### Homework
 
 1. When was the last time you ate out?
 2. When was the last time you met your best friend?
 3. When was the last time you went shopping?
-4. When was the last time you went to and outdoor market?
+4. When was the last time you went to an outdoor market?
 5. When was the last time you went on vacation?
 6. When was the last time you took pictures?
 7. When was the last time you went to a department store?
 8. When was the last time you used the Internet?
-9. When was the last time yousent an e-mail to someone?
+9. When was the last time you sent an e-mail to someone?
 10. When was the last time you played sports?
 11. When was the last time you went to a restaurant?
 12. When was the last time you went on a picnic?
