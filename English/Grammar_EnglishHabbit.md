@@ -181,3 +181,21 @@
 1. I eat breakfast.
 2. He loves me.
 3. I eat salad in the morning.
+
+# Day 9. 일반동사 부정문
+
+## 예문
+
+1. I do not like it.
+2. John does not understand me.
+3. I don't have time.
+
+## 문법
+
+1. 일반동사 부정문: do not + 일반동사, ~하지 않는다
+2. 주어가 3인칭 단수일 때: does not
+3. do not -> don't, does not -> doesn't
+
+## 연습
+
+1. ​
