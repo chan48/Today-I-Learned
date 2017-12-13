@@ -332,3 +332,12 @@ This [   ] will take place/will be held **on** Saturday, Man 12th.
 - Event, Conference, Seminar, Workshop, Interview
 - **in** + The main hall, The auditorium, The conference room, Room 245
 
+## 시간
+
+시간: 1-One, 2-Two, 3-Three, 4-Four, 5-Five, 6-Six, 7-Seven, 8-Eight, 9-Nine, 10-Ten, 11-Eleven, 12-Twelve
+
+분: 00-O'clock, 05-Oh-Five, 10-Ten, 15-Fifteen(장음), 20-Twenty, 25-Twenty Five, 30-Thirty, 35-Thirty Five, 40-Forty, 45-Forty Five, 50-Fifty, 55-Fifty Five
+
+- at + 시간
+- from + 시간 + to + 시간
+
