@@ -189,7 +189,6 @@
 12. Do you think the Internet is a good way to get information about movie?
 
 
-
 ---
 
 
@@ -341,3 +340,19 @@ This [   ] will take place/will be held **on** Saturday, Man 12th.
 - at + 시간
 - from + 시간 + to + 시간
 
+
+## 요일
+
+On + Monday/Tuesday/Wednesday/Thursday/Friday/Saturday/Sunday
+
+In + January/February/March/April/May/June/July/August/September/October/November/December
+
+On + January 10th
+
+날짜: 1st-First/2nd-Second/3rd-Third/4th-Forth/5th-Fifth/6th-Sixth/7th-Seventh/8th-Eighth/9th-Ninth/10th-Tenth/11th-Eleventh/12th-Twelfth/13th-Thirteenth/14th-Fourteenth/15th-Fifteenth/16th-Sixteenth/17th-Seventeenth/18th-Eighteenth/19th-Nineteenth/**20th-Tweieth(장음)**/21st-Twenty first/22nd-Twenty second/23rd-Twenty Third/24th-Twenty fourth/25th-Twenty fifth/26th-Twenty Sixth/27th-Twenty seventh/28th-Twenty eighth/29th-Twenty ninth/**30th-Thirtieth(장음)**/31st-Thirty first
+
+2000년 이후: 2016-Two thousand sixteen
+
+2000년 이전: 1965-Nineteen//sixty five
+
+In + 2015
