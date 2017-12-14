@@ -3,6 +3,7 @@
 ## 개요
 
 - Question 4: 15초 / Question 5: 15초 / Question 6: 30초
+- Q4, Q5 - 시간 안채워도 감점 없음
 - 준비 시간 없음
 - 질문이 음성과 화면으로 나옴. 답변하는 동안에도 화면에 지문이 띄워져 있음
 
@@ -143,7 +144,7 @@
 
 만능 답변: for thirty minutes, for six months
 
-##### 질문 예시
+##### 문제 예시
 
 1. How long did you have to travel to go to your school?
    - I had to travel **for about thirty minutes** to go my school.
@@ -152,7 +153,7 @@
 
 만능 답변: 5 minutes away from 장소, 2 hours away from 장소, 2 blocks away from 장소
 
-##### 질문 예시
+##### 문제 예시
 
 1. How far away from your hometown do you live now?
    - I live now **about an hour away** from my hometown.
@@ -167,7 +168,7 @@
 
 만능 답변: Yes or No, I think/like~?, I would~?
 
-##### 질문 예시
+##### 문제 예시
 
 1. Do you think the Internet is a good way to get information about movies?
    - **Yes, I think** the Internet is a good way to get information about movies.
@@ -189,27 +190,46 @@
 12. Do you think the Internet is a good way to get information about movie?
 
 
+### 하나의 항목 안에 두 개의 질문이 출제 된다면
+
+##### 문제 예시
+
+1. How often do you go to a convenient store and when was the last time you went there?
+   - I go to a convenient store once or twice a week and the last time I went there was yesterday.
+2. When was the last time you went to a convenient store and what **did** you **buy**?
+   - The last time I went to a convenient store was yesterday and I **bought** some snacks.
+
+### 과거 시제 중요!
+
+did + go = went / did + eat = ate / did + study = studied
+
+### 추가 문장
+
+1. Would you prefer to buy tickets for concert in person **or** online? **Why**?
+   - I would prefer to buy tickets for concert online **because** it is more convenient.
+
+#### Homework - 추가 문장 넣기
+
+1. Where do you usually go when you want to be alone?
+2. Where do you usually get information about new music?
+3. Where do you think is the best place to open a grocery store in your area?
+4. What is the most popular social networking site among your friends?
+5. Whte types of activities do you prefer to do when you go on vacation?
+6. How often do you use your cell-phone?
+7. How often do you travel on vacation?
+8. How often do you go to a convenient store?
+9. How long did you have to travel to go to your school?
+10. How far away from your hometown do you live now?
+11. How close from your home is the nearest movie theater?
+12. Do you think the Internet is a good way to get information about movie?
+
+
+
+
+
 ---
 
 
-
-#### 하나의 항목 안에 두 개의 질문이 출제 된다면
-
-- How often do you go to a convenient store and when was the last time you went there?
-- I go to a convenient store once or twice a week and the last time I went there was yesterday.
-- When was the last time you went to a convenient store and what **did** you buy?
-- I last time I went to a convenient store was yesterday and I **bought** some snacks.
-
-#### 과거 시제 엄청 중요!
-
-- did + go = went
-- did + eat = ate
-- did + study = studied
-
-#### 추가 문장
-
-- Would you prefer to buy tickets for concert in person **or** online? Why?
-- I would prefer to buy tickets for concert online **because** It is more convenient.
 
 ## Q6 (30초) 답변 문제 유형
 
