@@ -276,3 +276,194 @@ import './index.css';
 
 
 
+## 오버뷰
+
+### React란?
+
+React는 유저 인터페이스 구현을 위한 선언적이고, 효율적이고, 유동적인 JavaScript 라이브러리.
+
+몇 가지 다른 종류의 컴포넌트들을 가지고 있지만 `React.Component`의 서브클래스들을 가지고 시작할 것입니다.
+
+```Jsx
+class ShoppingList extends React.Component {
+  render() {
+    return (
+    	<div className="shopping-list">
+    		<h1>Shopping List for {this.props.name}</h1>
+    		<ul>
+    			<li>Instagram</li>
+    			<li>WhatsApp</li>
+    			<li>Oculus</li>
+    		</ul>
+    	</div>
+    );
+  }
+}
+
+// Example usage: <ShoppingList name="Mark" />	
+```
+
+잠시동안 재미있는 XML과 비슷한 태그들을 사용할 것입니다. 컴포넌트들은 React에게 당신이 무엇을 렌더하고 싶은지 알려줍니다. 그러면 React는 효율적으로 데이터가 변할 때 올바른 컴포넌트들을 곧장 업데이트하고 렌더합니다.
+
+여기에서 ShoppingList는 **React 컴포넌트 클래스**나 **React 컴포넌트 타입**입니다. 하나의 컴포넌트는 `props`라 불리는 파라미터를 사용하고 `render` 메서드를 통해 보여줄 뷰 계층을 리턴해줍니다.
+
+`render` 메서드는 랜더링하길 원하는 *description*을 리턴한 다음 React는 description을 가져오고 스크린에 랜더합니다. 특히, `render`는 랜더할 내용인 간단한 description인 **React 요소**를 리턴합니다. 대부분의 React 개발자들은 JSX라 불리는 특별한 문법을 사용합니다. JSX는 디 구조들을 쓰기 쉽게 만들어줍니다. `<div />`은 빌드 시  `React.createElement('div')`로 변환됩니다. 다음의 예제와 동일합니다.
+
+```Jsx
+return React.createdElement('div', {className: 'shopping-list},
+	React.createdElement('h1', /* ... h1 children ... */},
+	React.createdElement('ul', /* ... ul children ... */}
+);
+```
+
+전체 코드는 [여기](https://babeljs.io/repl/#?presets=react&code_lz=DwEwlgbgBAxgNgQwM5IHIILYFMC8AiJACwHsAHUsAOwHMBaOMJAFzwD4AoKKYQgRg65cAyiXJVqUADKMmUAGbEATlADepRWSQA6SpiwBfTtwD0fAdwCucc12ANWASUrME1RZmDH7R2_YDqhAhMSACC5J7egtz2APIwVhZIEWDmnlYcnuAQrADc7EA)에서 볼 수 있습니다.
+
+만약 더 궁금하다면 `createElement()`에 대한 더 자세한 설명을 [API reference](https://reactjs.org/docs/react-api.html#createelement)에서 볼 수 있습니다. 이 가이드에서는 직접적으로 이 것을 사용하지 않을 예정입니다. 우리는 JSX를 사용할 것입니다.
+
+JSX에 있는 중괄호 안에서 JavaScript 문법을 사용할 수 있습니다. 각 React 요소는 변수에 저장하거나 프로그램을 전달할 수 있는 실제 JavaScript 객체입니다.
+
+
+
+`ShoppingList` 컴포넌트는 DOM 컴포넌트 구성 요소만 랜더링하지만 `<ShoppingList />` 코드를 작성하여 커스텀 React 컴포넌트들을 쉽게 구성할 수 있습니다. 각 컴포넌트는 캡슐화되고 독립적으로 동작할 수 있습니다. 이는 간단한 컴포넌트들로 복잡한 UI들을 구현할 수 있게 해줍니다.
+
+
+
+### 시작하기
+
+[예시 코드](https://codepen.io/gaearon/pen/oWWQNa?editors=0010)를 통해 시작해봅시다.
+
+이 코드는 오늘 우리가 구현할 것의 틀을 포함하고 있습니다. 필요한 스타일들이 준비되어 있기 때문에 JavaScript만 신경쓰면 됩니다.
+
+세 가지의 컴포넌트들로 구성되어 있습니다.
+
+- Square
+- Board
+- Game
+
+Square 컴포넌트는 하나의 `<button>`을 랜더링합니다. Board 컴포넌트는 9개의 사각형들을 랜더링합니다. Game 컴포넌트는 나중에 우리가 채워 넣을 placeholder를 가진 하나의 보드를 랜더링합니다. 이 시점에서 이 컴포넌트들은 아무런 동작도 하지 않습니다.
+
+
+
+### props를 통해 데이터 전달하기
+
+이제 본격적으로 시작하기 위해 Board 컴포넌트로부터 Square 컴포넌트로 데이터를 전달해봅시다.
+
+Board의 `renderSquare` 메서드에서 Square 컴포넌트 prop에  `value` 데이터를 전달하기 위해 코드를 변경해주세요.
+
+```Js
+class Board extends React.Component {
+  renderSquare(i) {
+    return <Square value={i} />;
+  }
+```
+
+변경한 뒤 value 데이터를 보여주기 위해 Square 컴포넌트의 `render` 메서드 안의 `{/* TODO */} ` 코드를  `{this.props.value}`로 변경해주세요.
+
+변경 전:
+
+![https://reactjs.org/static/tictac-empty-1566a4f8490d6b4b1ed36cd2c11fe4b6-a9336.png](https://reactjs.org/static/tictac-empty-1566a4f8490d6b4b1ed36cd2c11fe4b6-a9336.png)
+
+변경 후: 랜더링된 결과물에서 각 사각형 안에 숫자가 있는 것을 볼 수 있습니다.
+
+![https://reactjs.org/static/tictac-numbers-685df774da6da48f451356f33f4be8b2-be875.png](https://reactjs.org/static/tictac-numbers-685df774da6da48f451356f33f4be8b2-be875.png)
+
+현재의 코드는 [이곳](https://codepen.io/gaearon/pen/aWWQOG?editors=0010)에서 볼 수 있습니다.
+
+
+
+### 인터렉티브 컴포넌트
+
+클릭 시 "X"로 채워시는 Square 컴포넌트를 만들어봅시다. Square의 `render()` 함수에서 반환된 버튼 태그를 다음과 같이 변경해봅시다.
+
+```Js
+class Square extends React.Component {
+  render() {
+    return (
+      <button className="square" onClick={() => alert('click')}>
+        {this.props.value}
+      </button>
+    );
+  }
+}
+```
+
+지금 사각형을 클릭하면 브라우저에서 알럿창이 뜨는걸 볼 수 있습니다.
+
+이는 새로운 JavaScript 화살표 함수 문법을 사용한 것입니다. `onClick` prop에 함수를 넘긴 것을 유의해주세요. `onClick={alert('click')}`은 버튼을 클릭하면 즉시 알럿창을 띄워줍니다.
+
+React 컴포넌트들은 생성자 안의 `this.state`를 설정하여 상태를 가질 수 있습니다. 이 상태는 각 컴포넌트 별로 가지고 있습니다. 사각형의 현재 value 데이터를 state에 저장하고 사각형을 클릭할 때 바꿔봅시다.
+
+첫 번째로 state를 초기화하기 위해 클래스에 생성자를 추가해줍니다.
+
+```js
+class Square extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: null,
+    };
+  }
+   
+  render() {
+    return (
+      <button className="square" onClick={() => alert('click')}>
+        {this.props.value}
+      </button>
+    );
+  }
+}
+```
+
+JavaScript 클래스에서 서브클래스의 생성자를 정의할 때 `super();` 메서드를 명시적으로 호출해야 합니다.
+
+Square `render` 메서드를 현재 state에서 value 데이터가 보이고 클릭 시 바뀌도록 변경해봅시다.
+
+- `<button>` 태그 안의 `this.state.value` 를 `this.props.value`로 변경하기
+- `() => alert()` 이벤트 핸들러를 `() => this.setState({value: 'X'})`로 변경하기
+
+다음과 같이 `<button>` 태그가 변경되면 됩니다.
+
+```Js
+class Square extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: null,
+    };
+  }
+   
+  render() {
+    return (
+      <button className="square" onClick={() => this.setState({value: 'X'})}>
+        {this.state.value}
+      </button>
+    );
+  }
+}
+```
+
+`this.setState`가 호출될 때마다 컴포넌트 업데이트가 예정되어 있으므로 전달된 상태 업데이트에서 React가 병합되고 하위 컴포넌트와 함께 다시 랜더링됩니다. 컴포넌트가 랜더링될 때 `this.state.value`는 `'X'`가 되고 그리드 안에 X가 보일 것입니다.
+
+사각형을 클릭하면 그 안에 X가 보일 것입니다.
+
+현재의 코드는 [이곳](https://codepen.io/gaearon/pen/VbbVLg?editors=0010)에서 볼 수 있습니다.
+
+
+
+### 개발자 도구
+
+[크롬](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi/related?hl=en)과 [파이어폭스](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/)에서 사용하는 React 개발자 도구 확장 프로그램은 React 컴포넌트 트리를 브라우저 개발자 도구 안에서 검사할 수 있게 해줍니다.
+
+![https://reactjs.org/static/devtools-878d91461c78d8f238e116477dfe0b46-6ca3b.png](https://reactjs.org/static/devtools-878d91461c78d8f238e116477dfe0b46-6ca3b.png)
+
+트리 안의 컴포넌트들의 props와 state를 검사할 수 있게 해줍니다.
+
+설치 후 페이지에 있는 원하는 컴포넌트를 오른쪽 클릭하고 "Inspect"를 클릭하여 개발자 도구를 열면 React 탭이 오른쪽의 마지막 탭으로 나타납니다.
+
+**그러나 CodePen를 사용하여 확장 프로그램을 동작시키고 싶다면 추가적으로 필요한 단계들이 있습니다.**
+
+1. 로그인 혹은 회원가입을 하여 이메일을 인증받으세요. 
+2. "Fork" 버튼을 클릭하세요.
+3. "Chnage View"를 클릭하고 "Debug mode"를 선택하세요.
+4. 새롭게 열린 탭에서는 React 탭이 있는 개발자 도구를 볼 수 있습니다.
+
