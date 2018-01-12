@@ -884,3 +884,424 @@ Board에서 `handleClick`를 빨리 리턴하도록 바꿀 수 있습니다. 그
 
 현재의 코드는 [이곳](https://codepen.io/gaearon/pen/LyyXgK?editors=0010)에서 볼 수 있습니다.
 
+
+
+## 히스토리 저장하기
+
+보드의 예전 상태를 다시 방문할 수 있도록 하여 이전 움직임 이후의 모습을 볼 수 있게 만들어봅시다. 각 움직임이 만들어질때마다 이미 새 `squares` 배열을 만들었씁니다. 이는 과거 보드 상태를 동시에 쉽게 저장할 수 있음을 의미합니다.
+
+상태에서 이것과 같은 객체를 저장하도록 계획해봅시다.
+
+```Js
+history = [
+  {
+    squares: [
+      null, null, null,
+      null, null, null,
+      null, null, null,
+    ]
+  },
+  {
+    squares: [
+      null, null, null,
+      null, 'X', null,
+      null, null, null,
+    ]
+  },
+  // ...
+]
+```
+
+우리는 상위 레벨 게임 컴포넌트가 움직임 리스트에 보이는 것이 가능하길 원합니다. 그래서 우리는 Square을 Board로 끌어당겼습니다. 이제 다시 Board에서 Game으로 끌어당겨 탑 레벨에서 필요한 모든 정보를 저장해봅시다.
+
+첫 번째로 생성자를 추가하여 Game의 초기 상태를 설정해봅시다.
+
+```Js
+class Game extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      history: [{
+        squares: Array(9).fill(null),
+      }],
+      xIsNext: true,
+    };
+  }
+
+  render() {
+    return (
+      <div className="game">
+        <div className="game-board">
+          <Board />
+        </div>
+        <div className="game-info">
+          <div>{/* status */}</div>
+          <ol>{/* TODO */}</ol>
+        </div>
+      </div>
+    );
+  }
+}
+```
+
+그 후 Board를 바꾸어 props를 거쳐 `squares`를 가져오고, 이전에 Square에서 만든 변경과 같이 Game에서 지정한 `onClick` prop를 가집니다. 각 사각형의 위치를 클릭 핸들러로 전달하여 어떤 사각형이 클릭되었는지 알 수 있습니다. 여기 필요한 단계 리스트가 있습니다.
+
+- Board의 `constructor`를 삭제하세요.
+- Board의 `renderSquare`에 있는 `this.props.squares[i]`를 `this.state.sqaures[i]`로 대체하세요.
+- Board의 `renderSquare`에 있는 `this.handleClick(i)`를 `this.props.onClick(i)`로 대체하세요.
+
+전체 Board 컴포넌트는 아래와 같습니다.
+
+```js
+class Board extends React.Component {
+  handleClick(i) {
+    const squares = this.state.squares.slice();
+    if (calculateWinner(squares) || squares[i]) {
+      return;
+    }
+    squares[i] = this.state.xIsNext ? 'X' : 'O';
+    this.setState({
+      squares: squares,
+      xIsNext: !this.state.xIsNext,
+    });
+  }
+
+  renderSquare(i) {
+    return (
+      <Square
+        value={this.props.squares[i]}
+        onClick={() => this.props.onClick(i)}
+      />
+    );
+  }
+
+  render() {
+    const winner = calculateWinner(this.state.squares);
+    let status;
+    if (winner) {
+      status = 'Winner: ' + winner;
+    } else {
+      status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
+    }
+
+    return (
+      <div>
+        <div className="status">{status}</div>
+        <div className="board-row">
+          {this.renderSquare(0)}
+          {this.renderSquare(1)}
+          {this.renderSquare(2)}
+        </div>
+        <div className="board-row">
+          {this.renderSquare(3)}
+          {this.renderSquare(4)}
+          {this.renderSquare(5)}
+        </div>
+        <div className="board-row">
+          {this.renderSquare(6)}
+          {this.renderSquare(7)}
+          {this.renderSquare(8)}
+        </div>
+      </div>
+    );
+  }
+}
+```
+
+Game의 `render`는 가장 최신의 히스토리 전체를 보여줘야하고 게임 상태를 계산하여 가져올 수 있습니다.
+
+```Js
+  render() {
+    const history = this.state.history;
+    const current = history[history.length - 1];
+    const winner = calculateWinner(current.squares);
+
+    let status;
+    if (winner) {
+      status = 'Winner: ' + winner;
+    } else {
+      status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
+    }
+
+    return (
+      <div className="game">
+        <div className="game-board">
+          <Board
+            squares={current.squares}
+            onClick={(i) => this.handleClick(i)}
+          />
+
+        </div>
+        <div className="game-info">
+          <div>{status}</div>
+          <ol>{/* TODO */}</ol>
+        </div>
+      </div>
+    );
+  }
+```
+
+Game이 상태를 랜더링하고 있기 때문에 `<div className='status'>{status}</div>`를 지울 수 있고 Board의 `render` 함수로부터 상태를 계산하는 코드를 지울 수 있습니다.
+
+```js
+  render() {
+    return (
+      <div>
+        <div className="board-row">
+          {this.renderSquare(0)}
+          {this.renderSquare(1)}
+          {this.renderSquare(2)}
+        </div>
+        <div className="board-row">
+          {this.renderSquare(3)}
+          {this.renderSquare(4)}
+          {this.renderSquare(5)}
+        </div>
+        <div className="board-row">
+          {this.renderSquare(6)}
+          {this.renderSquare(7)}
+          {this.renderSquare(8)}
+        </div>
+      </div>
+    );
+  }
+```
+
+그 다음 Board에서 Game으로 `handleClick` 메서드를 옮겨야합니다. Board 클래스로부터 잘라내어 Game클래스로 붙여넣기 할 수 있습니다.
+
+Game 상태는 다르게 구성되어있기 때문에 약간 변경해야 합니다. Game의 `handleClick`은 새로운 히스토리 항목을 연결하여 새로운 배열을 작성하여 스택에 푸시할 수 있습니다.
+
+```js
+  handleClick(i) {
+    const history = this.state.history;
+    const current = history[history.length - 1];
+    const squares = current.squares.slice();
+    if (calculateWinner(squares) || squares[i]) {
+      return;
+    }
+    squares[i] = this.state.xIsNext ? 'X' : 'O';
+    this.setState({
+      history: history.concat([{
+        squares: squares,
+      }]),
+      xIsNext: !this.state.xIsNext,
+    });
+  }
+```
+
+이 지점에서 Board는 `renderSquare`와 `render`만 필요합니다. 상태 초기화와 클릭 핸들러는 둘 다 Game에서 동작합니다.
+
+현재의 코드는 [이곳](https://codepen.io/gaearon/pen/EmmOqJ?editors=0010)에서 볼 수 있습니다.
+
+
+
+### 움직임 보여주기
+
+지금까지 게임에서 만든 움직임을 보여줍시다. 우리는 이전에 React 컴포넌트가 첫 클래스로 JS 객체이고 우리는 그것들을 통해 저장하고 전달할 수 있다고 배웠습니다. React에서 여러 아이템들을 랜더링하기 위해 우리는 React 요소의 배열을 전달했습니다. 배열을 빌드하는 가장 흔한 방법은 데이터 배열에서 map을 하는 것입니다. Game의 `render` 메서드에서 그것을 해봅시다.
+
+```js
+ render() {
+    const history = this.state.history;
+    const current = history[history.length - 1];
+    const winner = calculateWinner(current.squares);
+
+    const moves = history.map((step, move) => {
+      const desc = move ?
+        'Go to move #' + move :
+        'Go to game start';
+      return (
+        <li>
+          <button onClick={() => this.jumpTo(move)}>{desc}</button>
+        </li>
+      );
+    });
+
+    let status;
+    if (winner) {
+      status = 'Winner: ' + winner;
+    } else {
+      status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
+    }
+
+    return (
+      <div className="game">
+        <div className="game-board">
+          <Board
+            squares={current.squares}
+            onClick={(i) => this.handleClick(i)}
+          />
+        </div>
+        <div className="game-info">
+          <div>{status}</div>
+          <ol>{moves}</ol>
+        </div>
+      </div>
+    );
+  }
+```
+
+현재의 코드는 [이곳](https://codepen.io/gaearon/pen/EmmGEa?editors=0010)에서 볼 수 있습니다.
+
+히스토리의 각 단계에서 `<button>`이 있는 리스트 아이템 `<li>`을 만들었다. 우리가 곧 구현할 클릭 핸들러를 가지고 있다. 이 코드에서 다음과 같은 경고 메시지와 함께 게임에서 만들어지는 움직임의 리스트를 봐야한다. 
+
+> 경고: 배열이나 이터레이터에 있는 각 자식은 유니크한 "key" prop을 가져야한다. "Game"의 render 메서드를 확인해보세요.
+
+경고의 의미가 무엇인지 얘기해보자.
+
+
+
+### Keys
+
+아이템의 리스트를 랜더링할때 React는 항상 리스트에 있는 각 아이템에 대한 정보를 저장한다. 만약 상태를 가진 컴포넌트를 랜더링한다면 컴포넌트가 어떻게 실행되는지와 관계없이 상태는 저장되어야하고 React는 네이티브 뷰의 뒤에 참고할 것을 저장한다.
+
+리스트를 업데이트할때, React는 무엇을 바꿀지 결정해야 한다. 리스트에 아이템들을 추가하고 지우고 재배열하고 수정할 수 있었다.
+
+이 코드를 아래의 코드로 변형하는걸 상상해보자.
+
+```js
+<li>Alexa: 7 tasks left</li>
+<li>Ben: 5 tasks left</li>
+```
+
+```js
+<li>Ben: 9 tasks left</li>
+<li>Claudia: 8 tasks left</li>
+<li>Alexa: 5 tasks left</li>
+```
+
+사람의 눈에는 Alexa와 Ben의 자리가 바뀌고 Claudia가 추가된 것처럼 보인다. 하지만 React는 단순히 컴퓨터 프로그램이고 당신의 의도를 알지 못합니다. 결과적으로 React는 리스트의 각 요소에서 *key* 속성을 지정하기를 요청합니다. 문자열은 형제로부터 각 컴포넌트들을 구분합니다. 이 경우에 `alexa`, `ben`, `claudia`는 분별할 수 있는 키가 될 것입니다. 만약 아이템들이 데이터베이스의 객체와 일치한다면 데이터베이스 ID을 선택하는 것이 좋을 것입니다.
+
+```js
+<li key={user.id}>{user.name}: {user.taskCount} tasks left</li>
+```
+
+`key`는 React에 의해 제공된 특별한 속성입니다. (`ref`을 따라 더 확장된 기능) 요소가 만들어질때 React는 `key` 속성을 가져오고 리턴된 요소에 직접적으로 key를 저장합니다. key가 props의 한 부분으로 보일지라도 이것은 `this.props.key`를 이용해 참고할 수 없습니다. React는 자동적으로 어떤 자식이 수정되어야할지 결정하는 동안 key를 사용합니다. 컴포넌트가 자신의 키를 물어볼 방법은 없습니다.
+
+리스트가 랜더링될 때 React는 새로운 버전의 각 요소들을 가져오고 이전 리스트에서 매칭되는 키를 가진 것을 찾습니다. key가 세트에 추가될 때 컴포넌트는 만들어집니다.  키가 삭제될때 컴포넌트는 소멸됩니다. 키들은 React가 각 요소를 구분하기를 요청하여 다시 랜더링하는 것을 무시하고 상태를 유지할 수 있게 합니다. 만약 컴포넌트의 키를 바꾼다면 완전히 지워지고 새로운 상태로 생성될 것입니다.
+
+**동적으로 리스트를 빌드할때마다 적절한 키를 할당하는 것을 강력 추천합니다.** 만약 적절한 키를 가지지 못한다면 이를 수행할 수 있도록 데이터를 재구성하여야 할지도 모릅니다.
+
+특정한 키를 구분하지 못한다면 React는 경고를 주고 배열 인덱스를 키로 사용합니다. 이는 올바른 선택이 아닙니다. 만약 너가 리스트에 있는 요소들을 정렬하거나 리스트에 있는 버튼을 통해 지우거나 추가할때. 명시적으로 `key={i}`를 전달하는건 경고를 보여주지는 않지만 같은 문제를 발생시켜 대부분의 경우에 추천되지 않습니다.
+
+컴포넌트의 키가 전체적으로 유니크할 필요는 없지만 관련있는 형제들 사이에서는 유니크해야 합니다.
+
+
+
+##시간 여행 실행하기
+
+움직임 리스트를 위해 우리는 각 스텝에서 유니크 ID를 가졌습니다. 발생할 때 마다 움직임의 숫자. Game의 `render` 메서드에서 키는 `<li key={move}`로 가지고 경고는 사라집니다.
+
+```js
+ const moves = history.map((step, move) => {
+      const desc = move ?
+        'Go to move #' + move :
+        'Go to game start';
+      return (
+        <li key={move}>
+          <button onClick={() => this.jumpTo(move)}>{desc}</button>
+        </li>
+      );
+    });
+```
+
+현재의 코드는 [이곳](https://codepen.io/gaearon/pen/PmmXRE?editors=0010)에서 볼 수 있습니다.
+
+`junmTo`가 정의되지 않았기 때문에 어떤 움직임 버튼을 클릭하면 에러가 뜹니다. 우리가 현재 보고 있는 스텝이 무엇인디 알려주기 위해 Game 상태에 새로운 키를 추가해봅시다.
+
+처음으로 `stepNumber: 0`를 Game의 `constructor`의 초기 상태로 추가해봅시다.
+
+```js
+class Game extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      history: [{
+        squares: Array(9).fill(null),
+      }],
+      stepNumber: 0,
+      xIsNext: true,
+    };
+  }
+```
+
+다음으로 우리는 각 상태를 수정하기 위해 Game의 `jumpTo` 메서드를 정의할 것입니다. 또한 `xIsNext`를 수정할 것입니다. 만약 움직임의 숫자 인덱스가 짝수라면 `xIsNext`를 true로 설정합니다.
+
+Game 클래스에`jumpTo`라 불리는 메서드를 추가합니다.
+
+```js
+handleClick(i) {
+    // this method has not changed
+  }
+
+  jumpTo(step) {
+    this.setState({
+      stepNumber: step,
+      xIsNext: (step % 2) === 0,
+    });
+  }
+
+  render() {
+    // this method has not changed
+  }
+```
+
+Game `handleClick`에 상태를 수정하기 위해 `stempNumber:history.length`를 추가함으로 새로운 움직임이 만들어질때 `stepNumber`는 업데이트 됩니다. 현재의 보드 상태를 읽을 때 `handleClick`이 `stepNumber`라고 깨달아 새로운 요소를 만들기 위해 클릭하는 시간대로 코드가 돌아가게 할 수 있습니다.
+
+```Js
+  handleClick(i) {
+    const history = this.state.history.slice(0, this.state.stepNumber + 1);
+    const current = history[history.length - 1];
+    const squares = current.squares.slice();
+    if (calculateWinner(squares) || squares[i]) {
+      return;
+    }
+    squares[i] = this.state.xIsNext ? 'X' : 'O';
+    this.setState({
+      history: history.concat([{
+        squares: squares
+      }]),
+      stepNumber: history.length,
+      xIsNext: !this.state.xIsNext,
+    });
+  }
+```
+
+이제 히스토리의 각 스텝으로부터 읽기 위해 Game의 `render`를 수정할 수 있습니다.
+
+```js
+  render() {
+    const history = this.state.history;
+    const current = history[this.state.stepNumber];
+    const winner = calculateWinner(current.squares);
+
+    // the rest has not changed
+```
+
+현재의 코드는 [이곳](https://codepen.io/gaearon/pen/gWWZgR?editors=0010)에서 볼 수 있습니다.
+
+이제 어떤 움직임 버튼을 클릭하든 보드는 즉시 그 시간대 보여지는 게임으로 업데이트될 것입니다.
+
+
+
+### 마무리
+
+틱택톡 게임을 완성했습니다.
+
+- 틱택톡 게임을 플레이해보세요.
+- 한 명의 플레이어가 게임에서 이길때를 나타내줍니다.
+- 게임이 진행되는 동안 움직임 기록이 저장됩니다.
+- 게임 보드의 에전 버전을 보여주기 위해 시간을 되돌리는 것을 할 수 있습니다.
+
+잘 동작하네요! 지금 React가 어떻게 작동하는지 관해 잘 알게되었다고 느끼면 좋겠습니다.
+
+최종 결과물은 [여기](https://codepen.io/gaearon/pen/gWWZgR?editors=0010)에서 확인하세요.
+
+시간이 여유 있거나 새로운 스킬들을 연습해보고 싶다면 성장을 위해 해볼 수 있는 몇 가지 아이디어가 있습니다. 점점 더 어려워지게 배치되어있습니다.
+
+1. 움직임 리스트에서 (col, row) 형태에 각 움직임 위치를 표시하세요.
+2. 움직임 리스트의 선택된 아이템을 볼드처리하세요.
+3. 하드 코딩한 것들 대신 사각형을 두 개의 루프를 사용하여 Board를 다시 작성하세요.
+4. 오름차순 혹은 내림차순 뭐든지 움직임을 정렬하는 버튼을 추가해보세요.
+5. 누군가 이겼을 때 무엇 때문에 이겼는지 세 개의 사각형을 하이라이트하세요.
+
+가이드가 진행되는 동안 우리는 요소, 컴포넌트, props, 상태를 포함한 React의 수많은 컨셉들을 다뤘습니다. 각 주제에 대한 깊은 설명을 원한다면 [남은 문서](https://reactjs.org/docs/hello-world.html)를 확인하세요. 컴포넌트 정의에 대해 더 많이 배우고 싶다면 [이 문서](https://reactjs.org/docs/react-component.html)를 확인하세요.
