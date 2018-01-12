@@ -6,80 +6,68 @@
 
 ### 무엇을 구현할 것인가
 
-대화형 틱택톡 게임을 구현하려고 합니다.
+대화형 틱택토 게임을 구현하려고 합니다.
 
-원한다면 최종 결과물을 [여기](https://codepen.io/gaearon/pen/gWWZgR?editors=0010)에서 확인할 수 있습니다.
+원한다면 최종 결과물을 [여기](https://codepen.io/gaearon/pen/gWWZgR?editors=0010)에서 확인할 수 있습니다. 아직 코드가 이해되지 않거나 문법이 낯설어도 걱정하지 마세요. 튜토리얼에서 차근차근 틱택토 게임을 구현하는 방법을 배울테니까요.
 
+게임을 플레이해보세요. 이동 리스트에 있는 버튼을 클릭하여 클릭한 때로 돌아가고, 그 때로 돌아간 후 보드가 어떻게 보이는지 확인할 수 있습니다.
 
-
-
-
-## Tutorial: Intro To React
+게임에 익숙해지셨다면 탭을 닫으세요. 다음 섹션에서 간단한 템플릿을 가지고 시작할 것입니다.
 
 
 
-## 시작하기 전에
+#### 사전 준비
 
-### 무엇을 빌드하고 있는가
+HTML과 JavaScript에 익숙할 것으로 생각합니다. 하지만 HTML과 JavaScript를 사용해본 적이 없더라도 튜토리얼을 따를 수 있어야 합니다.
 
-가이드에서는 반응형 틱택톡 게임을 구현할 예정입니다.
-
-결과물을 확인하길 원한다면 [이곳](https://codepen.io/gaearon/pen/gWWZgR?editors=0010)에서 확인할 수 있습니다. 아직 이해가 되지 않거나 친숙하지 않은 문법이 사용되도 걱정하지 마세요. 가이드를 통해 한 단계씩 틱택톡 게임을 어떻게 구현하는지 배울 예정입니다.
-
-게임을 해보세요. 이동 리스트에 있는 버튼을 클릭하여 그 시간 대로 이동하고, 이동한 후 보드가 어떻게 보이는지 볼 수 있습니다.
-
-일단 게임에 익숙해지면 마음껏 탭을 닫으세요. 다음 섹션에서 간단한 템플릿부터 시작할 것입니다.
+JavaScript를 다시 봐야한다면 [이 가이드](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)를 추천합니다. 튜토리얼에서 JavaScript의 최신 버전인 ES6의 몇 가지 특징들인 [화살표 함수](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), [클래스](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes), [let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let), [const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)를 사용할 것입니다. [Babel REPL](https://babeljs.io/repl/#?presets=react&code_lz=MYewdgzgLgBApgGzgWzmWBeGAeAFgRgD4AJRBEAGhgHcQAnBAEwEJsB6AwgbgChRJY_KAEMAlmDh0YWRiGABXVOgB0AczhQAokiVQAQgE8AkowAUPGDADkdECChWeASl4AlOMOBQAIgHkAssp0aIySpogoaFBUQmISdC48QA)을 사용하여 ES6 코드가 어떻게 컴파일되는지 확인해볼 수 있습니다.
 
 
 
-### 미리 준비할 것들
+#### 튜토리얼을 공부하는 방법
 
-HTML과 JavaScript에 익숙할 것이라 가정하여 가이드를 진행할 예정이다. 만약 이전에 HTML과 JavaScript를 사용해본적이 없더라도 가이드를 따라올 수 있어야 합니다.
-
-만약 JavaScript에 대해 다시 알 필요가 있다면 우리는 [이 가이드](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)를 추천합니다. 또한 JavaScript의 최신 버전인 ES6의 몇 가지 특징들을 사용하고 있음을 알아두세요. 가이드에서 우리는 [화살표 함수](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), [클래스](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes), [let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let), [const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const) 상태들을 사용합니다. [Babel REPL](https://babeljs.io/repl/#?presets=react&code_lz=MYewdgzgLgBApgGzgWzmWBeGAeAFgRgD4AJRBEAGhgHcQAnBAEwEJsB6AwgbgChRJY_KAEMAlmDh0YWRiGABXVOgB0AczhQAokiVQAQgE8AkowAUPGDADkdECChWeASl4AlOMOBQAIgHkAssp0aIySpogoaFBUQmISdC48QA)를 사용하여 ES6가 코드가 어떻게 컴파일되는지 확인할 수 있습니다.
+튜토리얼을 공부하기 위한 두 가지 방법이 있습니다. 브라우저에서 코드를 작성하거나 컴퓨터의 로컬 개발 환경을 설치할 수 있습니다. 편한 방법을 선택하여 공부하시면 됩니다.
 
 
 
-### 어떻게 가이드를 따라하면 되나요
-
-가이드를 끝까지 따라오기 위한 두 가지 방법이 있습니다. 브라우저에서 코드에 쓰거나 컴퓨터의 로컬 개발 환경을 설치할 수 있습니다. 편하게 느껴지는 방법을 선택하여 따르시면 됩니다.
-
-#### 브라우저에서 코드를 쓰기 원한다면
+##### 브라우저에서 코드를 작성하기 원한다면
 
 가장 빠르게 시작할 수 있습니다!
 
-첫 번째로 새로운 탭에서 [시작 코드](https://codepen.io/gaearon/pen/oWWQNa?editors=0010)를 여세요. 빈 틱택톡 필드가 보일 것입니다. 가이드에서 이 코드를 수정할 것입니다.
+새로운 탭에서 [시작 코드](https://codepen.io/gaearon/pen/oWWQNa?editors=0010)를 여세요. 빈 틱택토 필드를 볼 수 있습니다. 튜토리얼에서는 이 코드를 수정하여 진행합니다.
 
-로컬 개발 환경 설정에 관한 다음 섹션을 스킵할 수 있습니다. 바로 오버뷰로 넘어가세요.
+다음 섹션인 로컬 개발 환경 설정을 스킵할 수 있습니다. 바로 개요 섹션으로 넘어가세요.
 
-#### 에디터에서 코드를 쓰기 원한다면
 
-컴퓨터에 프로젝트를 설치할 수 있습니다.
 
-안내: **이 방법은 선택이지 필수가 아닙니다!**
+##### 사용하던 데이터에서 코드를 작성하기 원한다면
 
-이 방법은 더 많은 것을 해야하지만 에디터의 편리함을 이용할 수 있습니다.
+다른 방법으로 사용하는 컴퓨터에 프로젝트를 설치할 수 있습니다.
 
-만약 이 방법을 해보길 원한다면 다음의 스텝들을 따라하세요.
+**이 방법은 필수가 아닌 선택 사항입니다!**
 
-1. 설치된 `Node.js`가 최신 버전인지 확인하세요.
-2. 새로운 프로젝트를 생성하기 위해 [설치 방법](https://reactjs.org/docs/add-react-to-a-new-app.html)을 따라하세요.
+더 많은 준비 작업이 필요하지만 에디터의 편리함을 누리며 공부할 수 있습니다.
 
-```shell
+만약 이 방법으로 공부하기를 원한다면 필요한 단계들이 있습니다.
+
+1. 설치된 [`Node.js`](https://nodejs.org/en/)가 최신 버전인지 확인해보세요.
+2. 새로운 프로젝트를 생성하기 위해 [설치 방법](https://reactjs.org/docs/add-react-to-a-new-app.html)을 따르세요.
+
+```Shell
 $ npm install -g create-react-app
 $ create-react-app my-app
 ```
 
-1. 새 프로젝트의 `src/` 폴더에 있는 모든 파일들을 삭제하세요. (내용만 삭제하고 폴더는 삭제하지 마세요.)
+3. 새 프로젝트의 `src/` 폴더에 있는 모든 파일들을 삭제해주세요. (폴더 안의 내용만 삭제하되 폴더는 삭제하지 마세요)
 
-```shell
+```Shell
 $ cd my-app
 $ rm -f src/*
 ```
 
-1. [이 CSS 코드](https://codepen.io/gaearon/pen/oWWQNa?editors=0100)를 `src/` 폴더에 있는 이름이 `index.css`인 파일을 추가하세요.
-2. [이 JS 코드](https://codepen.io/gaearon/pen/oWWQNa?editors=0010)를 `src/` 폴더에 있는 이름이 `index.js`인 파일을 추가하세요.
-3. `src/` 폴더에 있는 `index.js`의 맨 위에 아래 세줄을 추가하세요.
+4. [이 CSS 코드](https://codepen.io/gaearon/pen/oWWQNa?editors=0100)를 `src/` 폴더에 `index.css` 파일로 추가해주세요.
+5. [이 JS 코드](https://codepen.io/gaearon/pen/oWWQNa?editors=0010)를 `src/` 폴더에 `index.js` 파일로 추가해주세요.
+6. `src/` 폴더에 있는 `index.js`의 최상단에 아래 세 줄을 추가해주세요.
 
 ```js
 import React from 'react';
@@ -87,118 +75,132 @@ import ReactDOM from 'react-dom';
 import './index.css';
 ```
 
-이제 프로젝트 폴더에서 `npm start` 명령어를 실행하고 브라우저에서 `http://localhost:3000`를 여세요. 그러면 빈 틱택톡 필드를 볼 것입니다.
+이제 프로젝트 폴더에서 `npm start` 명령어를 실행하고 브라우저에서 `http://localhost:3000`를 여세요. 빈 틱택토 필드를 볼 수 있습니다.
 
-여러분의 데이터에서 문법 하이라이팅 설정을 하고 싶다면 [이 문서](http://babeljs.io/docs/editors)를 추천합니다.
-
-
-
-### 도와주세요! 막히는 부분이 있어요!
-
-만약 막히는 부분이 있다면 [커뮤니티 리소스](https://reactjs.org/community/support.html)를 확인하세요. 특히 [Reactiflux chat](https://reactjs.org/community/support.html#reactiflux-chat)는 빠르게 도움을 받기 아주 좋은 방법입니다. 만약 어디에서도 좋은 대답을 듣지 못했다면 이슈를 올리세요. 그러면 우리가 도와드립니다.
-
-이 과정이 끝났다면 시작해봅시다!
+에디터에서 문법 하이라이팅 설정을 하고 싶다면 [이 문서](http://babeljs.io/docs/editors)를 따르세요.
 
 
 
-## 오버뷰
+#### 도와주세요! 막히는 부분이 있어요!
 
-### React란?
+막히는 부분이 생겼다면 [지원하는 커뮤니티](https://reactjs.org/community/support.html)를 확인해보세요. 특히 [Reactiflux chat](https://reactjs.org/community/support.html#reactiflux-chat)은 빠르게 도움을 받을 수 있는 좋은 방법입니다. 어떤 커뮤니티에서도 필요한 대답을 듣지 못했다면 이슈를 제출하세요. 우리가 도와드립니다.
 
-React는 유저 인터페이스 구현을 위한 선언적이고, 효율적이고, 유동적인 JavaScript 라이브러리.
+다 끝났으면 시작해봅시다!
 
-몇 가지 다른 종류의 컴포넌트들을 가지고 있지만 `React.Component`의 서브클래스들을 가지고 시작할 것입니다.
 
-```Jsx
+
+---
+
+
+
+## 개요
+
+### React란 무엇인가요?
+
+React는 유저 인터페이스 구현을 위한 선언적이고 효율적이며 유연한 JavaScript 라이브러리입니다.
+
+React는 여러 종류의 컴포넌트들을 가지고 있지만 우리는 `React.Component`의 서브클래스를 사용하여 시작할 것입니다.
+
+```Js
 class ShoppingList extends React.Component {
   render() {
     return (
-    	<div className="shopping-list">
-    		<h1>Shopping List for {this.props.name}</h1>
-    		<ul>
-    			<li>Instagram</li>
-    			<li>WhatsApp</li>
-    			<li>Oculus</li>
-    		</ul>
-    	</div>
+      <div className="shopping-list">
+        <h1>Shopping List for {this.props.name}</h1>
+        <ul>
+          <li>Instagram</li>
+          <li>WhatsApp</li>
+          <li>Oculus</li>
+        </ul>
+      </div>
     );
   }
 }
 
-// Example usage: <ShoppingList name="Mark" />	
+// Example usage: <ShoppingList name="Mark" />
 ```
 
-잠시동안 재미있는 XML과 비슷한 태그들을 사용할 것입니다. 컴포넌트들은 React에게 당신이 무엇을 렌더하고 싶은지 알려줍니다. 그러면 React는 효율적으로 데이터가 변할 때 올바른 컴포넌트들을 곧장 업데이트하고 렌더합니다.
+XML과 비슷한 재밌는 태그들을 사용할 것입니다. 작성한 컴포넌트는 React에게 무엇을 랜더링하고 싶은지 알려줍니다. 그러면 React는 데이터가 변경될 때 올바른 컴포넌트들을 업데이트하고 랜더링합니다. 
 
-여기에서 ShoppingList는 **React 컴포넌트 클래스**나 **React 컴포넌트 타입**입니다. 하나의 컴포넌트는 `props`라 불리는 파라미터를 사용하고 `render` 메서드를 통해 보여줄 뷰 계층을 리턴해줍니다.
+여기에서 ShoppingList는 **React 컴포넌트 클래스** 혹은 **React 컴포넌트 타입**입니다. 하나의 컴포넌트는 `props`라 불리는 파라미터를 사용하고, `render` 메서드를 통해 표시할 뷰 계층 구조를 반환합니다.
 
-`render` 메서드는 랜더링하길 원하는 *description*을 리턴한 다음 React는 description을 가져오고 스크린에 랜더합니다. 특히, `render`는 랜더할 내용인 간단한 description인 **React 요소**를 리턴합니다. 대부분의 React 개발자들은 JSX라 불리는 특별한 문법을 사용합니다. JSX는 디 구조들을 쓰기 쉽게 만들어줍니다. `<div />`은 빌드 시  `React.createElement('div')`로 변환됩니다. 다음의 예제와 동일합니다.
+`render` 메서드는 랜더링하길 원하는 *내용*을 반환하면 React는 그 내용을 가져와 스크린에 랜더링합니다. 특히 `render`는 랜더링할 간단한 내용인 **React 엘리먼트**를 반환합니다. 대부분의 React 개발자들은 이 구조를 더 쉽게 작성할 수 있게 해주는 JSX라는 특별한 문법을 사용합니다. `<div />`라 쓰면 빌드 시 `React.createElement('div')`로 변환됩니다. 위의 코드는 아래의 코드와 동일합니다.
 
-```Jsx
-return React.createdElement('div', {className: 'shopping-list},
-	React.createdElement('h1', /* ... h1 children ... */},
-	React.createdElement('ul', /* ... ul children ... */}
+```js
+return React.createElement('div', {className: 'shopping-list'},
+  React.createElement('h1', /* ... h1 children ... */),
+  React.createElement('ul', /* ... ul children ... */)
 );
 ```
 
 전체 코드는 [여기](https://babeljs.io/repl/#?presets=react&code_lz=DwEwlgbgBAxgNgQwM5IHIILYFMC8AiJACwHsAHUsAOwHMBaOMJAFzwD4AoKKYQgRg65cAyiXJVqUADKMmUAGbEATlADepRWSQA6SpiwBfTtwD0fAdwCucc12ANWASUrME1RZmDH7R2_YDqhAhMSACC5J7egtz2APIwVhZIEWDmnlYcnuAQrADc7EA)에서 볼 수 있습니다.
 
-만약 더 궁금하다면 `createElement()`에 대한 더 자세한 설명을 [API reference](https://reactjs.org/docs/react-api.html#createelement)에서 볼 수 있습니다. 이 가이드에서는 직접적으로 이 것을 사용하지 않을 예정입니다. 우리는 JSX를 사용할 것입니다.
+`createdElement()`에 대해 더 많은 내용이 궁금하다면 [API reference](https://reactjs.org/docs/react-api.html#createelement)에 자세한 설명이 있습니다. 튜토리얼에서는 `createdElement()`를 직접적으로 사용하지 않습니다. 대신 JSX를 사용할 것입니다.
 
-JSX에 있는 중괄호 안에서 JavaScript 문법을 사용할 수 있습니다. 각 React 요소는 변수에 저장하거나 프로그램을 전달할 수 있는 실제 JavaScript 객체입니다.
+JSX에서는 중괄호 안에 JavaScript 문법을 사용할 수 있습니다. 각 React 엘리먼트는 변수에 저장하거나 프로그램에 여기저기에 전달할 수 있는 실제 JavaScript 객체입니다.
 
-
-
-`ShoppingList` 컴포넌트는 DOM 컴포넌트 구성 요소만 랜더링하지만 `<ShoppingList />` 코드를 작성하여 커스텀 React 컴포넌트들을 쉽게 구성할 수 있습니다. 각 컴포넌트는 캡슐화되고 독립적으로 동작할 수 있습니다. 이는 간단한 컴포넌트들로 복잡한 UI들을 구현할 수 있게 해줍니다.
+`ShoppingList` 컴포넌트는 내장된 DOM 컴포넌트만 랜더링하지만 `<ShoppingList />` 코드를 작성하여 커스텀 React 컴포넌트를 쉽게 구성할 수 있습니다. 각 컴포넌트는 캡슐화되어 독립적으로 동작할 수 있습니다. 이때문에 간단한 컴포넌트들로 복잡한 UI를 구현할 수 있습니다.
 
 
 
 ### 시작하기
 
-[예시 코드](https://codepen.io/gaearon/pen/oWWQNa?editors=0010)를 통해 시작해봅시다.
+[시작 코드](https://codepen.io/gaearon/pen/oWWQNa?editors=0010)를 가지고 시작해봅시다.
 
-이 코드는 오늘 우리가 구현할 것의 틀을 포함하고 있습니다. 필요한 스타일들이 준비되어 있기 때문에 JavaScript만 신경쓰면 됩니다.
+이 코드는 우리가 구현할 틱택토 게임의 틀을 가지고 있습니다. 필요한 스타일들을 준비해두었기 때문에 JavaScript만 신경쓰면 됩니다.
 
-세 가지의 컴포넌트들로 구성되어 있습니다.
+세 가지 컴포넌트로 구성되어 있습니다.
 
 - Square
 - Board
 - Game
 
-Square 컴포넌트는 하나의 `<button>`을 랜더링합니다. Board 컴포넌트는 9개의 사각형들을 랜더링합니다. Game 컴포넌트는 나중에 우리가 채워 넣을 placeholder를 가진 하나의 보드를 랜더링합니다. 이 시점에서 이 컴포넌트들은 아무런 동작도 하지 않습니다.
+Square 컴포넌트는 하나의 `<button>`을 랜더링합니다. Board 컴포넌트는 9개의 사각형을 랜더링합니다. Game 컴포넌트는 나중에 우리가 채워 넣어야 할 공백이 있는 하나의 보드를 랜더링합니다. 지금 이 컴포넌트들은 아무런 동작도 하지 않습니다.
 
 
 
 ### props를 통해 데이터 전달하기
 
-이제 본격적으로 시작하기 위해 Board 컴포넌트로부터 Square 컴포넌트로 데이터를 전달해봅시다.
+본격적으로 시작하기 위해 Board 컴포넌트에서 Square 컴포넌트로 데이터를 전달해봅시다.
 
-Board의 `renderSquare` 메서드에서 Square 컴포넌트 prop에  `value` 데이터를 전달하기 위해 코드를 변경해주세요.
+Board의 `renderSquare` 메서드에서 Square 컴포넌트 prop에 `value` 값을 전달하도록 코드를 변경해주세요.
 
-```Js
+```js
 class Board extends React.Component {
   renderSquare(i) {
     return <Square value={i} />;
   }
 ```
 
-변경한 뒤 value 데이터를 보여주기 위해 Square 컴포넌트의 `render` 메서드 안의 `{/* TODO */} ` 코드를  `{this.props.value}`로 변경해주세요.
+value 값을 보여주기 위해 Square 컴포넌트의 `render` 메서드 안의 코드 `{/* TODO */}`를 `{this.props.value}`로 변경해주세요.
+
+```js
+class Square extends React.Component {
+  render() {
+    return (
+      <button className="square">
+        {this.props.value}
+      </button>
+    );
+  }
+}
+```
 
 변경 전:
 
-![https://reactjs.org/static/tictac-empty-1566a4f8490d6b4b1ed36cd2c11fe4b6-a9336.png](https://reactjs.org/static/tictac-empty-1566a4f8490d6b4b1ed36cd2c11fe4b6-a9336.png)
+![./images/react_tutorial_1.png](./images/react_tutorial_1.png)
 
-변경 후: 랜더링된 결과물에서 각 사각형 안에 숫자가 있는 것을 볼 수 있습니다.
+변경 후: 랜더링된 결과에서는 각 사각형 안에 숫자가 위치합니다.
 
-![https://reactjs.org/static/tictac-numbers-685df774da6da48f451356f33f4be8b2-be875.png](https://reactjs.org/static/tictac-numbers-685df774da6da48f451356f33f4be8b2-be875.png)
+![./images/react_tutorial_2.png](./images/react_tutorial_2.png)
 
-현재의 코드는 [이곳](https://codepen.io/gaearon/pen/aWWQOG?editors=0010)에서 볼 수 있습니다.
+지금까지의 코드는 [이곳](https://codepen.io/gaearon/pen/aWWQOG?editors=0010)에서 볼 수 있습니다.
 
 
 
-### 인터렉티브 컴포넌트
+### 대화형 컴포넌트
 
-클릭 시 "X"로 채워시는 Square 컴포넌트를 만들어봅시다. Square의 `render()` 함수에서 반환된 버튼 태그를 다음과 같이 변경해봅시다.
+클릭 시 "X"로 채워지는 Square 컴포넌트를 만들어봅시다. Square의 `render()` 함수에서 반환된 버튼 태그를 다음과 같이 변경해주세요.
 
 ```js
 class Square extends React.Component {
@@ -212,41 +214,13 @@ class Square extends React.Component {
 }
 ```
 
-지금 사각형을 클릭하면 브라우저에서 알럿창이 뜨는걸 볼 수 있습니다.
+이제 사각형을 클릭하면 브라우저에서 알럿창이 뜨는걸 확인할 수 있습니다.
 
-이는 새로운 JavaScript 화살표 함수 문법을 사용한 것입니다. `onClick` prop에 함수를 넘긴 것을 유의해주세요. `onClick={alert('click')}`은 버튼을 클릭하면 즉시 알럿창을 띄워줍니다.
+새로운 JavaScript 문법인 화살표 함수를 사용하였습니다. `onClick` prop에 함수를 전달하였습니다. `onClick={alert('click')}` 코드를 작성하고 버튼을 클릭하면 알럿창 대신 경고가 뜨게됩니다.
 
-React 컴포넌트들은 생성자 안의 `this.state`를 설정하여 상태를 가질 수 있습니다. 이 상태는 각 컴포넌트 별로 가지고 있습니다. 사각형의 현재 value 데이터를 state에 저장하고 사각형을 클릭할 때 바꿔봅시다.
+React 컴포넌트는 생성자에서 `this.state`를 설정하여 상태를 가질 수 있습니다. 상태는 각 컴포넌트마다 가지고 있습니다. 사각형의 현재 value 값을 상태에 저장하고 클릭할 때 바뀌도록 만들어봅시다.
 
-첫 번째로 state를 초기화하기 위해 클래스에 생성자를 추가해줍니다.
-
-```js
-class Square extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: null,
-    };
-  }
-   
-  render() {
-    return (
-      <button className="square" onClick={() => alert('click')}>
-        {this.props.value}
-      </button>
-    );
-  }
-}
-```
-
-JavaScript 클래스에서 서브클래스의 생성자를 정의할 때 `super();` 메서드를 명시적으로 호출해야 합니다.
-
-Square `render` 메서드를 현재 state에서 value 데이터가 보이고 클릭 시 바뀌도록 변경해봅시다.
-
-- `<button>` 태그 안의 `this.state.value` 를 `this.props.value`로 변경하기
-- `() => alert()` 이벤트 핸들러를 `() => this.setState({value: 'X'})`로 변경하기
-
-다음과 같이 `<button>` 태그가 변경되면 됩니다.
+먼저 상태를 초기화하기 위해 클래스에 생성자를 추가해주세요.
 
 ```Js
 class Square extends React.Component {
@@ -256,7 +230,35 @@ class Square extends React.Component {
       value: null,
     };
   }
-   
+
+  render() {
+    return (
+      <button className="square" onClick={() => alert('click')}>
+        {this.props.value}
+      </button>
+    );
+  }
+}
+```
+
+JavaScript 클래스에서 서브클래스의 생성자를 정의할 때 `super();` 메서드를 명시적으로 호출해줘야 합니다.
+
+Square의 `render` 메서드에서 현재 상태의 value 값을 표시하고 클릭할 때 바뀌도록 수정해주세요.
+
+- `<button>` 태그 안의 `this.props.value` 를 `this.state.value`로 변경해주세요.
+- `() => alert()` 이벤트 핸들러를 `() => this.setState({value: 'X'})`로 변경해주세요.
+
+`<button>` 태그는 다음과 같습니다.
+
+```js
+class Square extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: null,
+    };
+  }
+
   render() {
     return (
       <button className="square" onClick={() => this.setState({value: 'X'})}>
@@ -267,30 +269,34 @@ class Square extends React.Component {
 }
 ```
 
-`this.setState`가 호출될 때마다 컴포넌트 업데이트가 예정되어 있으므로 전달된 상태 업데이트에서 React가 병합되고 하위 컴포넌트와 함께 다시 랜더링됩니다. 컴포넌트가 랜더링될 때 `this.state.value`는 `'X'`가 되고 그리드 안에 X가 보일 것입니다.
+`this.setState`가 호출될 때마다 컴포넌트가 업데이트되므로 업데이트된 상태가 전달되어 React가 이를 병합하고 하위 컴포넌트와 함께 다시 랜더링합니다. 컴포넌트가 랜더링될 때 `this.state.value`는 `'X'`가 되어 그리드 안에 X가 보이게 됩니다.
 
-사각형을 클릭하면 그 안에 X가 보일 것입니다.
+이제 사각형을 클릭하면 그 안에 X가 표시됩니다.
 
-현재의 코드는 [이곳](https://codepen.io/gaearon/pen/VbbVLg?editors=0010)에서 볼 수 있습니다.
+지금까지의 코드는 [이곳](https://codepen.io/gaearon/pen/VbbVLg?editors=0010)에서 볼 수 있습니다.
 
 
 
 ### 개발자 도구
 
-[크롬](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi/related?hl=en)과 [파이어폭스](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/)에서 사용하는 React 개발자 도구 확장 프로그램은 React 컴포넌트 트리를 브라우저 개발자 도구 안에서 검사할 수 있게 해줍니다.
+[크롬](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)과 [파이어폭스](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/)의 React 개발자 도구 확장 프로그램은 React 컴포넌트 트리를 브라우저의 개발자 도구 안에서 검사할 수 있게 해줍니다.
 
-![https://reactjs.org/static/devtools-878d91461c78d8f238e116477dfe0b46-6ca3b.png](https://reactjs.org/static/devtools-878d91461c78d8f238e116477dfe0b46-6ca3b.png)
+![./images/react_tutorial_3.png](./images/react_tutorial_3.png)
 
-트리 안의 컴포넌트들의 props와 state를 검사할 수 있게 해줍니다.
+트리 안의 컴포넌트들의 props와 상태를 검사할 수 있습니다.
 
-설치 후 페이지에 있는 원하는 컴포넌트를 오른쪽 클릭하고 "Inspect"를 클릭하여 개발자 도구를 열면 React 탭이 오른쪽의 마지막 탭으로 나타납니다.
+설치 후 페이지에서 검사하길 원하는 컴포넌트를 오른쪽 클릭하고 "Inspect"를 클릭하여 개발자 도구를 열면 오른쪽 마지막 탭에 React 탭이 보입니다.
 
-**그러나 CodePen를 사용하여 확장 프로그램을 동작시키고 싶다면 추가적으로 필요한 단계들이 있습니다.**
+**CodePen을 사용하여 이 확장 프로그램을 동작시키고 싶다면 추가적으로 필요한 작업들이 있습니다.**
 
-1. 로그인 혹은 회원가입을 하여 이메일을 인증받으세요. 
+1. 로그인 혹은 회원가입을 하고 이메일을 인증받으세요.
 2. "Fork" 버튼을 클릭하세요.
-3. "Chnage View"를 클릭하고 "Debug mode"를 선택하세요.
-4. 새롭게 열린 탭에서는 React 탭이 있는 개발자 도구를 볼 수 있습니다.
+3. "Change View"를 클릭하고 "Debug mode"를 선택하세요.
+4. 새롭게 열린 탭에서 React 탭이 있는 개발자 도구를 볼 수 있습니다.
+
+
+
+---
 
 
 
